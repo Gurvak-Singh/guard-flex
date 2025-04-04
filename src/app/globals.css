@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #60A5FA, #8B5CF6, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  position: relative;
+  background: linear-gradient(135deg, #60A5FA, #8B5CF6, #EC4899);
+  padding: 1px;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.gradient-border:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(96, 165, 250, 0.2);
+}
+
+.gradient-border > * {
+  background: #000;
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.floating-element:hover {
+  transform: scale(1.02);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.blur-gradient {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, 
+    rgba(96, 165, 250, 0.15),
+    rgba(139, 92, 246, 0.15),
+    rgba(236, 72, 153, 0.15)
+  );
+  filter: blur(80px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
+.nav-blur {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at top right,
+    rgba(96, 165, 250, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 25%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+
+.text-gradient-hover {
+  transition: all 0.3s ease;
+}
+
+.text-gradient-hover:hover {
+  background: linear-gradient(135deg, #60A5FA, #8B5CF6, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@layer utilities {
+  .bg-gradient-blur {
+    background: radial-gradient(
+      circle at center,
+      rgba(var(--gradient-color-1), 0.15) 0%,
+      rgba(var(--gradient-color-2), 0.15) 25%,
+      rgba(var(--gradient-color-3), 0.15) 50%,
+      rgba(var(--gradient-color-4), 0.15) 75%,
+      rgba(var(--gradient-color-5), 0.15) 100%
+    );
+    filter: blur(64px);
+  }
+}
