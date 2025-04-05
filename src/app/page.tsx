@@ -13,16 +13,13 @@ export default function Home() {
               GuardFlex
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/features" className="text-gray-600 hover:text-gray-900">Features</Link>
-              <Link href="/pricing" className="text-gray-600 hover:text-gray-900">Pricing</Link>
-              <Link href="/automation" className="text-gray-600 hover:text-gray-900">Automation</Link>
+              <Link href="/about" className="text-gray-600 hover:text-gray-900">About</Link>
+              <Link href="/blog" className="text-gray-600 hover:text-gray-900">Blog</Link>
+              <Link href="/contact" className="text-gray-600 hover:text-gray-900">Contact</Link>
             </div>
             <div className="flex items-center space-x-4">
-              <Link href="/login" className="text-gray-600 hover:text-gray-900">Guard/Business Login</Link>
-              <Link href="/guards/signup">
-                <Button className="bg-black text-white hover:bg-gray-800">
-                  Get Started
-                </Button>
+              <Link href="/login" className="bg-black text-white hover:bg-gray-800 px-4 py-2 rounded-md transition-colors">
+                Login
               </Link>
             </div>
           </div>
@@ -42,14 +39,14 @@ export default function Home() {
               60 Days free trial · No credit card required
             </p>
             <div className="flex items-center justify-center gap-4 pt-4">
-              <Link href="/guards/signup">
+              <Link href="/guards/join">
                 <Button size="lg" className="bg-black text-white hover:bg-gray-800">
                   Join as Guard
                 </Button>
               </Link>
-              <Link href="/employers/signup">
+              <Link href="/employers/join">
                 <Button size="lg" variant="outline" className="border-gray-200">
-                  Hire Security Staff
+                  Join as Employer
                 </Button>
               </Link>
             </div>
@@ -139,14 +136,14 @@ export default function Home() {
               Ready to transform your security operations?
             </h2>
             <div className="flex justify-center gap-4">
-              <Link href="/guards/signup">
+              <Link href="/guards/join">
                 <Button size="lg" className="bg-black text-white hover:bg-gray-800">
                   Join as Guard
                 </Button>
               </Link>
-              <Link href="/employers/signup">
-                <Button size="lg" className="bg-black text-white hover:bg-gray-800">
-                  Hire Guards
+              <Link href="/employers/join">
+                <Button size="lg" variant="outline" className="border-gray-200">
+                  Join as Employer
                 </Button>
               </Link>
             </div>
@@ -173,7 +170,7 @@ export default function Home() {
             <div>
               <h4 className="text-gray-900 font-semibold mb-4">For Guards</h4>
               <ul className="space-y-2">
-                <li><Link href="/guards/signup" className="text-gray-600 hover:text-gray-900">Become a Guard</Link></li>
+                <li><Link href="/guards/join" className="text-gray-600 hover:text-gray-900">Become a Guard</Link></li>
                 <li><Link href="/guards/training" className="text-gray-600 hover:text-gray-900">Training</Link></li>
                 <li><Link href="/guards/resources" className="text-gray-600 hover:text-gray-900">Resources</Link></li>
               </ul>
@@ -181,7 +178,7 @@ export default function Home() {
             <div>
               <h4 className="text-gray-900 font-semibold mb-4">For Businesses</h4>
               <ul className="space-y-2">
-                <li><Link href="/employers/signup" className="text-gray-600 hover:text-gray-900">Hire Guards</Link></li>
+                <li><Link href="/employers/join" className="text-gray-600 hover:text-gray-900">Become an Employer</Link></li>
                 <li><Link href="/employers/pricing" className="text-gray-600 hover:text-gray-900">Pricing</Link></li>
                 <li><Link href="/employers/solutions" className="text-gray-600 hover:text-gray-900">Solutions</Link></li>
               </ul>
