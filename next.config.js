@@ -1,13 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverActions: true,
-  },
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/security-app' : '',
   images: {
+    domains: ['avatars.githubusercontent.com'],
     unoptimized: true,
   },
+  // Add basePath and assetPrefix for GitHub Pages deployment
+  // The following lines can be uncommented and modified with your repo name when deploying
+  // basePath: process.env.NODE_ENV === 'production' ? '/security-app' : '',
+  // assetPrefix: process.env.NODE_ENV === 'production' ? '/security-app/' : '',
 }
 
 module.exports = nextConfig
