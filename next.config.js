@@ -3,16 +3,25 @@ const nextConfig = {
   output: 'export',
   distDir: 'dist',
   images: {
-    unoptimized: true
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.githubusercontent.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'xsgames.co'
+      },
+      {
+        protocol: 'https',
+        hostname: '*.supabase.co'
+      }
+    ]
   },
   trailingSlash: true,
-  compiler: {
-    removeConsole: true
-  },
-  webpack: (config) => {
-    config.cache = false;
-    return config;
-  }
+  reactStrictMode: true,
+  swcMinify: true
 }
 
 module.exports = nextConfig
